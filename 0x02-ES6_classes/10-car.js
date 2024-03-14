@@ -1,40 +1,43 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-unused-vars */
+
 export default class Car {
-    constructor(brand, motor, color) {
-        this.brand = brand;
-        this.motor = motor;
-        this.color = motor;
-    }
-    
-    get brand() {
-        return this._brand;
-    }
+  constructor(brand, motor, color) {
+    this.brand = brand;
+    this.motor = motor;
+    this.color = motor;
+  }
 
-    set brand(value) {
-        this._brand = value;
-    }
+  get brand() {
+    return this._brand;
+  }
 
-    get motor() {
-        return this._motor;
-    }
+  set brand(value) {
+    this._brand = value;
+  }
 
-    set motor(value) {
-        this._motor = value;
-    }
+  get motor() {
+    return this._motor;
+  }
 
-    get color() {
-        return this._color;
-    }
+  set motor(value) {
+    this._motor = value;
+  }
 
-    set color(value) {
-        this._color = value;
-    }
+  get color() {
+    return this._color;
+  }
 
-    static get [Symbol.species]() {
-        return this;
-    }
+  set color(value) {
+    this._color = value;
+  }
 
-    cloneCar() {
-        const Species = this.constructor[Symbol.species];
-        return new Species();
-    }
+  static get [Symbol.species]() {
+    return this;
+  }
+
+  cloneCar() {
+    const Species = this.constructor[Symbol.species];
+    return new Species();
+  }
 }
