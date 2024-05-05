@@ -19,3 +19,4 @@ describe('API integration test', () => {
       done();
     });
   });
+}
